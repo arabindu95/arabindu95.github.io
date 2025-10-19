@@ -72,28 +72,30 @@ body {
 }
 
 /* Circle sizes */
+/* Desktop */
 .circle1 {
   width: 15px;
   height: 15px;
-  background: #38bdf8;
   transform: rotate(0deg) translateX(230px);
   animation: orbit1 9000ms linear infinite;
+  background: #38bdf8;
 }
 .circle2 {
   width: 20px;
   height: 20px;
-  background: #facc15;
   transform: rotate(0deg) translateX(255px);
   animation: orbit2 9500ms linear infinite;
+  background: #facc15;
 }
 .circle3 {
   width: 25px;
   height: 25px;
-  background: #edd071;
   transform: rotate(0deg) translateX(280px);
   animation: orbit3 10000ms linear infinite;
+  background: #edd071;
 }
 
+/* Desktop keyframes */
 @keyframes orbit1 {
   0% {
     transform: rotate(0deg) translateX(230px);
@@ -116,6 +118,13 @@ body {
   }
   100% {
     transform: rotate(360deg) translateX(280px);
+  }
+}
+
+/* Mobile: hide completely */
+@media (max-width: 768px) {
+  .circle-container {
+    display: none;
   }
 }
 
